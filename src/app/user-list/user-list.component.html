@@ -1,0 +1,29 @@
+
+<!-- <app-user-row></app-user-row> -->
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.name}}</td>
+      <td>{{user.age}}</td>
+      <td>
+        <button (click)="onBtnClick(user)">
+          View Details
+        </button>
+      </td>
+    </tr>
+    <!-- <user-row *ngFor="let user of user" [user]="user"></user-row> -->
+  </tbody>
+</table>
+<!-- <div *ngIf="selectedUser">
+    <app-button [name]="selectedUser.name"></app-button>
+    <h2>Selected User Details</h2>
+    <h3>Name: {{selectedUser.name}}</h3>
+    <h3>Age: {{selectedUser.age}}</h3>
+  </div> -->
